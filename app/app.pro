@@ -25,7 +25,7 @@ HEADERS += \
     text/text.h
 
 
-QMAKE_CFLAGS += -Wall -Wextra -Wmisleading-indentation -Wsign-compare
+QMAKE_CFLAGS += -Wall -Wextra
 # gcov
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
