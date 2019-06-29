@@ -23,7 +23,8 @@ void change_cursor_position(text txt, int new_line, int new_position)
   }
   node *p;
   p = txt->begin;
-  for (int i = 0; i < new_line; i++){
+  int i;
+  for (i = 0; i < new_line; i++){
     p = p->next;
   }
   if (new_position > strlen(p->contents)){
