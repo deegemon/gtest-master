@@ -70,7 +70,7 @@ TEST(r1ne,pr2){
         index++;
     }
 
-    EXPECT_EQ(count,7);
+    EXPECT_EQ(count,5);
 
     fclose(file);
 
