@@ -10,13 +10,13 @@ TEST(showupfirst,pr1){
     text txt = create_text();
     FILE *file;
     char buf[MAXLINE + 1];
-    char loadFile[] = "test_save_input1.txt";
+    char loadFile[] = "tests/input/test_save_input1.txt";
 
     load(txt,loadFile);
     remove_first_no_entry_line(txt);
     node *current = txt->begin;
 
-    if((file = fopen("test_suf.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_suf.txt","r")) == NULL){
         FAIL();
     }
 
