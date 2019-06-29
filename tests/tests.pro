@@ -5,13 +5,12 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG += thread
 CONFIG -= qt
-CONFIG += c++11
 
 QMAKE_CXXFLAGS += -Wall -Wextra
 QMAKE_CFLAGS += -Wall -Wextra
 
 # gcov
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c11
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
