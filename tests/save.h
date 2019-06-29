@@ -10,7 +10,7 @@ extern "C" {
 
 TEST(save1,pr1){
     text txt = create_text();
-    FILE *file = nullptr;
+    FILE *file;
     char buf[MAXLINE + 1];
     char loadFile[] = "test_save_input1.txt";
     char saveFile[] = "test_save_result1.txt";
@@ -20,9 +20,8 @@ TEST(save1,pr1){
 
     /*Вызов тестируемой функции*/
     save(txt,saveFile);
-    file = fopen("test_save_result1.txt","")
     /*Если сохранённый файл не открывается, то ошибка*/
-    if((file == NULL)){
+    if((file = fopen("test_save_result1.txt","r")) == NULL){
         FAIL();
     }
 
