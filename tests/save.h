@@ -12,8 +12,8 @@ TEST(save1,pr1){
     text txt = create_text();
     FILE *file;
     char buf[MAXLINE + 1];
-    char loadFile[] = "test_save_input1.txt";
-    char saveFile[] = "test_save_result1.txt";
+    char loadFile[] = "tests/input/test_save_input1.txt";
+    char saveFile[] = "tests/result/test_save_result1.txt";
 
     /*Загружаем файл*/
     load(txt,loadFile);
@@ -21,7 +21,7 @@ TEST(save1,pr1){
     /*Вызов тестируемой функции*/
     save(txt,saveFile);
     /*Если сохранённый файл не открывается, то ошибка*/
-    if((file = fopen("test_save_result1.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_save_result1.txt","r")) == NULL){
         FAIL();
     }
 
