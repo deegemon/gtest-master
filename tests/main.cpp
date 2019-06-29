@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "save.h"
+#include "r1ne.h"
 
 int main(int argc, char *argv[])
 {
