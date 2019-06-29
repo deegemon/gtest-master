@@ -6,12 +6,12 @@ CONFIG -= app_bundle
 CONFIG += thread
 CONFIG -= qt
 
-QMAKE_CXXFLAGS += -Wall -Wextra
-QMAKE_CFLAGS += -Wall -Wextra
+QMAKE_CXXFLAGS += -Wall -Wextra -Wsign-compare
+QMAKE_CFLAGS += -Wall -Wextra -Wsign-compare
 
 # gcov
 QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c99
-QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
+QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c99
 LIBS += -lgcov
 
 
