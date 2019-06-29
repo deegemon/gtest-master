@@ -11,7 +11,7 @@ TEST(r1ne,pr1){
     text txt = create_text();
     FILE *file;
     char buf[MAXLINE + 1];
-    char loadFile[] = "test_save_input1.txt";
+    char loadFile[] = "tests/input/test_save_input1.txt";
     int index = 0;
     int count = 0;
 
@@ -20,7 +20,7 @@ TEST(r1ne,pr1){
     node *current = txt->begin;
 
 
-    if((file = fopen("test_r1ne.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_r1ne.txt","r")) == NULL){
         FAIL();
     }
 
@@ -46,7 +46,7 @@ TEST(r1ne,pr2){
     text txt = create_text();
     FILE *file;
     char buf[MAXLINE + 1];
-    char loadFile[] = "test_save_input2.txt";
+    char loadFile[] = "tests/input/test_save_input2.txt";
     int index = 0;
     int count = 0;
 
@@ -55,7 +55,7 @@ TEST(r1ne,pr2){
     node *current = txt->begin;
     current = current->next;
 
-    if((file = fopen("test_r1ne.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_r1ne.txt","r")) == NULL){
         FAIL();
     }
 
