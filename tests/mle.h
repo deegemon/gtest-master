@@ -45,7 +45,7 @@ TEST(mle,pr2){
 
     while(current){
         if(index == 0){
-            if(txt->cursor->position == 32){
+            if(txt->cursor->position == 33){
                 SUCCEED();
             }
             else {
