@@ -54,7 +54,6 @@ TEST(r1ne,pr2){
     remove_first_no_entry_line(txt);
     node *current = txt->begin;
     current = current->next;
-    current = current->next;
 
     if((file = fopen("tests/result/test_r1ne.txt","r")) == NULL){
         FAIL();
