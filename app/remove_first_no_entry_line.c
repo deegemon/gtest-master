@@ -26,7 +26,8 @@ void remove_first_no_entry_line(text txt){
 /* Проверяет что строка состоит только из пробелов. */
 int check_is_empty(char *str){
   int l = strlen(str);
-  for (int i = 0; i < l; i++){
+	int i;
+  for (i = 0; i < l; i++){
     if (!isspace(str[i])){
 	return 1;/*Если строка непустая*/
     }
