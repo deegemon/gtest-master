@@ -20,9 +20,9 @@ TEST(save1,pr1){
 
     /*Вызов тестируемой функции*/
     save(txt,saveFile);
-
+    file = fopen("test_save_result1.txt","")
     /*Если сохранённый файл не открывается, то ошибка*/
-    if((file == fopen("test_save_result1.txt","") == NULL)){
+    if((file == NULL)){
         FAIL();
     }
 
