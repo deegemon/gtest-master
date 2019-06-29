@@ -28,7 +28,7 @@ HEADERS += \
 
 QMAKE_CFLAGS += -Wall -Wextra
 # gcov
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c11
 LIBS += -lgcov
 
 SUBDIRS += \
