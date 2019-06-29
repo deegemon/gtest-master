@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "save.h"
 #include "r1ne.h"
+#include "showupfirst.h"
 
 int main(int argc, char *argv[])
 {
