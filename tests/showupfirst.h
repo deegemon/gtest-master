@@ -13,7 +13,7 @@ TEST(showupfirst,pr1){
     char loadFile[] = "tests/input/test_save_input1.txt";
 
     load(txt,loadFile);
-    remove_first_no_entry_line(txt);
+    showupfirst(txt);
     node *current = txt->begin;
 
     if((file = fopen("tests/result/test_showupfirst.txt","r")) == NULL){
