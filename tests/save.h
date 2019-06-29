@@ -34,7 +34,7 @@ TEST(save1,pr1){
             current = current->next;
         }
     }
-
+    fclose(file);
     SUCCEED();
 }
 #endif // SAVE_H
