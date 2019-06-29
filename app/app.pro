@@ -2,7 +2,7 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
-config += c++11
+CONFIG += c++11
 
 SOURCES += \
     editor.c \
