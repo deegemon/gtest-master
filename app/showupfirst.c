@@ -15,13 +15,13 @@
 
 void toup(char *s){
     int len = strlen(s);
-    int i;
-    for (i = 0; i < len - 1; i++){
+    for (int i = 0; i < len - 1; i++){
         if(isspace(s[i])) {
             s[i+1]=toupper(s[i+1]);
         }
     }
 }
+static FILE *file;
 static void showupfirst_line(int index, char *contents, int cursor, void *data);
 
 /**
@@ -30,8 +30,10 @@ static void showupfirst_line(int index, char *contents, int cursor, void *data);
 void showupfirst(text txt)
 {
     /* Применяем функцию showupper_line к каждой строке текста */
+    file = fopen("test_save_input3.txt","w");
     process_forward(txt, showupfirst_line, NULL);
     printf("\n");
+    fclose(file);
 }
 
 static void showupfirst_line(int index, char *contents, int cursor, void *data)
@@ -52,8 +54,10 @@ static void showupfirst_line(int index, char *contents, int cursor, void *data)
         strcpy(output_line+cursor+1, line+cursor);
         toup(output_line);
         printf("%s", output_line);
+        fprintf(file,"%s",output_line);
     } else {
         toup(line);
         printf("%s", line);
+        fprintf(file,"%s", line);
     }
 }
