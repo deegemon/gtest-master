@@ -10,7 +10,7 @@ extern "C" {
 
 TEST(save1,pr1){
     text txt = create_text();
-    FILE *file;
+    FILE *file = nullptr;
     char buf[MAXLINE + 1];
     char loadFile[] = "test_save_input1.txt";
     char saveFile[] = "test_save_result1.txt";
@@ -22,17 +22,17 @@ TEST(save1,pr1){
     save(txt,saveFile);
 
     /*Если сохранённый файл не открывается, то ошибка*/
-    if((file == fopen("test_save_result1.txt","r") == NULL)){
+    if((file == fopen("test_save_result1.txt","") == NULL)){
         FAIL();
     }
 
     node *current = txt->begin;
 
-    while(fgets(buf,MAXLINE,file)){
+    while(fgets(buf, MAXLINE, file)){
         if(current){
             ASSERT_STREQ(buf, current->contents);
 
-            current = current -> next;
+            current = current->next;
         }
     }
 
