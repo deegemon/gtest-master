@@ -30,7 +30,6 @@ TEST(mle,pr1){
         index++;
         current = current->next;
     }
-    fclose(file);
     SUCCEED();
 }
 TEST(mle,pr2){
@@ -56,7 +55,6 @@ TEST(mle,pr2){
         index++;
         current = current->next;
     }
-    fclose(file);
     SUCCEED();
 }
 #endif // MLE_H
