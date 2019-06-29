@@ -2,6 +2,7 @@
 #include "save.h"
 #include "r1ne.h"
 #include "showupfirst.h"
+#include "mwcrsr.h"
 
 int main(int argc, char *argv[])
 {
