@@ -15,7 +15,7 @@ TEST(showupfirst,pr1){
     showupfirst(txt);
     node *current = txt->begin;
 
-    if((file = fopen("tests/result/test_suf.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_showupfirst.txt","r")) == NULL){
         FAIL();
     }
     while(fgets(buf,MAXLINE,file)){
