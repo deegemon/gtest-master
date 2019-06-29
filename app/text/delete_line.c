@@ -10,7 +10,8 @@
 
 void delete_line(text txt, int line_num){
     node *p = txt->begin;
-    for (int i = 1; i < line_num; i++){
+    int i;
+    for (i = 1; i < line_num; i++){
         p = p->next;
     }
     if (line_num == 1){
