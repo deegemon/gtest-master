@@ -10,12 +10,12 @@ TEST(showupfirst,pr1){
     text txt = create_text();
     FILE *file;
     char buf[MAXLINE + 1];
-    char loadFile[] = "test_save_input3.txt";
+    char loadFile[] = "tests/input/test_save_input3.txt";
     load(txt,loadFile);
     showupfirst(txt);
     node *current = txt->begin;
 
-    if((file = fopen("test_suf.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_suf.txt","r")) == NULL){
         FAIL();
     }
     while(fgets(buf,MAXLINE,file)){
