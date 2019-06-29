@@ -33,5 +33,5 @@ void load(text txt, char *filename)
         append_line(txt, buf);
     }
     
-    fclose(file);
+    fclose(f);
 }
