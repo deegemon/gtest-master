@@ -2,6 +2,7 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
+config += c++11
 
 SOURCES += \
     editor.c \
@@ -27,7 +28,7 @@ HEADERS += \
 
 QMAKE_CFLAGS += -Wall -Wextra
 # gcov
-QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
 LIBS += -lgcov
 
 SUBDIRS += \
