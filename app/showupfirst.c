@@ -30,7 +30,7 @@ static void showupfirst_line(int index, char *contents, int cursor, void *data);
 void showupfirst(text txt)
 {
     /* Применяем функцию showupper_line к каждой строке текста */
-    file = fopen("test_save_input3.txt","w");
+    file = fopen("tests/input/test_save_input3.txt","w");
     process_forward(txt, showupfirst_line, NULL);
     printf("\n");
     fclose(file);
