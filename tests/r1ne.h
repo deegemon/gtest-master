@@ -20,7 +20,7 @@ TEST(r1ne,pr1){
     node *current = txt->begin;
 
 
-    if((file = fopen("test_save_input1.txt","r")) == NULL){
+    if((file = fopen("test_r1ne.txt","r")) == NULL){
         FAIL();
     }
 
