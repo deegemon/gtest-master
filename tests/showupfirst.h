@@ -16,7 +16,7 @@ TEST(showupfirst,pr1){
     remove_first_no_entry_line(txt);
     node *current = txt->begin;
 
-    if((file = fopen("tests/result/test_suf.txt","r")) == NULL){
+    if((file = fopen("tests/result/test_showupfirst.txt","r")) == NULL){
         FAIL();
     }
 
