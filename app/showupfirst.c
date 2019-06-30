@@ -47,12 +47,12 @@ static void showupfirst_line(int index, char *contents, int cursor, void *data)
     /* Капитализация символов */
     char line[MAXLINE];
     char output_line[MAXLINE];
-    strcpy(line, contents);
+    strncpy(line, contents, sizeof(line));
 
     if (cursor >= 0){
         strncpy(output_line, line, cursor);
         output_line[cursor] = '|';
-        strcpy(output_line+cursor+1, line+cursor);
+        strncpy(output_line+cursor+1, line+cursor, sizeof(output_line+cursor+1));
         toup(output_line);
         printf("%s", output_line);
         fprintf(file,"%s",output_line);
