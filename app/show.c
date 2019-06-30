@@ -40,12 +40,12 @@ static void show_line(int index, char *contents, int cursor, void *data)
     /* Выводим строку на экран */
       char line[MAXLINE];
       char output_line[MAXLINE];
-      strcpy(line, contents, sizeof(line));
+      strlcpy(line, contents, sizeof(line));
 
   if (cursor >= 0) { 
     strncpy(output_line, line, cursor); 
     output_line[cursor] = '|';
-    strcpy(output_line + cursor + 1, line + cursor, sizeof(output_line + cursor + 1));
+    strlcpy(output_line + cursor + 1, line + cursor, sizeof(output_line + cursor + 1));
     printf("%s", output_line);
   } else {
     printf("%s", line);
